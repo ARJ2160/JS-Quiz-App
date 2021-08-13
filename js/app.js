@@ -12,7 +12,7 @@ const text= document.querySelectorAll(".disappear-box");
 let que_count = 0;
 let que_numb = 1;
 let counter;
-let timeValue = 15;
+let timeValue = 10;
 let widthValue = 0;
 let score = 0;
 
@@ -41,10 +41,10 @@ start_button.addEventListener("click", () => {
 
     // Make Quiz questions appear
     quiz_box.classList.add("appear");
-
+    
     showQuestions(0);
     questionCounter(1);
-    startTimer(15);
+    startTimer(10);
 });
 
 //If Next Button in Quiz is pressed
@@ -59,7 +59,6 @@ next_btn.onclick = () => {
         next_btn.style.display = "none";
     }
     else{
-        console.log("Done");
         showResultBox(score);
     }
 }
@@ -132,13 +131,14 @@ function showResultBox(score){
     if(score >= 3){
         score_text.innerHTML = '<span>Congratulations! You scored <p>'+ score +'</p> out of <p>'+ questions.length +'</p></span>';
     }else{
-        score_text.innerHTML = '<span> You scored <p>'+ score +'</p> out of <p>'+ questions.length +'</p></span><p>Please take the test again and score above 3 to download the certificate</p>';
+        score_text.innerHTML = '<span> You scored <p>'+ score +'</p> out of <p>'+ questions.length +'</p></span><p><span>Please take the test again and score above 3 to download the certificate</span></p>';
         download_btn.style.display = "none";
     }
 }
 
 // <------------------------------------------------------- Starting the Timer --------------------------------------->
 function startTimer(time){
+
     counter = setInterval(timer, 1000);
     function timer(){
 

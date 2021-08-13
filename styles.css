@@ -137,12 +137,12 @@ body{
 /*-------------------------------------------- Quiz Section -------------------------------------------------------------*/
 .quiz-box{
     min-width: 40vw;
-    height: 70vh;
+    height: auto;
     border-radius: 40px;
     background-color: #fff;
     margin: 10px;
     display: none;
-    overflow-y: auto;
+    overflow-y: none;
 }
 .quiz-box.appear{
     display: block;
