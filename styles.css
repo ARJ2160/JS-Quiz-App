@@ -156,14 +156,6 @@ body{
     justify-content: space-between;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.2);
 }
-.quiz-box .quiz-header .time_line{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 50%;
-    height: 3px;
-    background: red;
-} 
 .quiz-header .header_text{
     font-size: 20px;
     font-weight: 600;
@@ -174,8 +166,6 @@ body{
     justify-content: space-between;
     width: 10rem;
     height: 3.1rem;
-    background-color: #536de6;
-    border: 1px solid #323a46;
     border-radius: 5px;
     padding: 0 8px;
 }
