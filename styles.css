@@ -255,6 +255,7 @@ body{
 }
 #quiz footer .total_que span{
     display: flex;
+    padding-top: 15px;
     user-select: none;
 }
 #quiz footer .total_que span p{
