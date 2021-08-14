@@ -5,6 +5,7 @@ const quiz_box = document.querySelector(".quiz-box");
 const quiz_que = document.querySelector(".quiz-question");
 const options = document.querySelector(".options-list");
 const timeCount = document.querySelector(".timer .time_sec");
+const timeText = document.querySelector(".timer .time_text")
 const score_text = document.querySelector(".score_text");
 const box = document.querySelector(".shadow-box");
 const text= document.querySelectorAll(".disappear-box");
@@ -140,14 +141,16 @@ function showResultBox(score){
 function startTimer(time){
 
     counter = setInterval(timer, 1000);
+    timeText.textContent = "Time Left :- ";
     function timer(){
 
         timeCount.textContent = time;
-        time--;
+        time--; 
 
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
+            timeText.textContent = "Timed Out!";
             //To mark the correct one if user does not choose
             for (let i = 0; i < options.children.length; i++){
                 if(options.children[i].textContent === questions[que_count].answer){
