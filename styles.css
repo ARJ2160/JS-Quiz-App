@@ -329,6 +329,9 @@ body{
     font-size: 1.5rem;
     margin: 10px 0;
 }
+.fa-icon{
+    color: gold;
+}
 .score_text span p{
     font-weight: 600;
     margin-bottom: 0;
