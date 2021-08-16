@@ -213,7 +213,7 @@ body{
 }
 /*-------------------------------------------- Quiz Section -------------------------------------------------------------*/
 .quiz-box{
-    min-width: 35vw;
+    min-width: 30vw;
     height: auto;
     border-radius: 2rem;
     background-color: #fff;
@@ -240,23 +240,25 @@ body{
 .quiz-header .timer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 10rem;
     height: 3.1rem;
     border-radius: 5px;
-    padding: 0 8px;
+    padding: 0 5px;
 }
 .quiz-header .timer .time_text{
-    font-size: 17px;
+    font-size: 1rem;
     user-select: none;
 }
 .quiz-header .timer .time_sec{
     font-size: 18px;
-    background: linear-gradient(150deg, #eaedfd 0%, #eaedfd 100%);;
+    background: linear-gradient(150deg, #eaedfd 0%, #eaedfd 100%);
     height: 2rem;
     width: 3rem;
     color: #000;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     line-height: 1.5;
     border-radius: 5px;
 }
@@ -264,26 +266,26 @@ body{
     padding: 25px 30px 20px 30px;
 }
 .quiz-box .quiz-part .quiz-question{
-    font-size: 30px;
+    font-size: 1.5rem;
     line-height: 1.5;
     font-weight: bolder;
 }
 .quiz-box .quiz-part .options-list{
-    padding: 20px 0;
+    padding: 20px 10px;
     display: block;
 }
 .quiz-part .options-list .option{
     border: 1px solid #84c5fe;
     border-radius: 5px;
-    background:rgba(0, 0, 0, 0.2);
-    padding: 8px 15px;
-    font-size: 18px;
-    margin-bottom: 15px;
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
+    /* width: 80%; */
 } 
 .quiz-part .options-list .option:hover{
     background: #536de6;
@@ -333,6 +335,7 @@ body{
 #quiz footer .total_que span{
     display: flex;
     padding-top: 15px;
+    margin-right: 1rem;
     user-select: none;
 }
 #quiz footer .total_que span p{
@@ -344,9 +347,10 @@ body{
 }
 #quiz footer .next_btn{
     display: none;
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
+    height: auto;
+    padding: 10px;
+    /* padding: 0 13px; */
+    font-size: 15px;
     font-weight: 400;
     border: none;
     outline: none;
@@ -410,12 +414,58 @@ body{
     background-color: rgb(106, 90, 205);
     color: #fff;
 }
-/*-------------------------------------------- Footer Section -------------------------------------------------------------*/
-.footer{
-    margin-top: 5rem;
-    letter-spacing: 1.6px;
+@media (max-width: 650px){
+    .quiz-box{
+        min-width: 15vw;
+    }
+    .shadow-box{
+        min-width: 100%;
+        border-radius: 0;
+    }
 }
+@media (max-width: 450px){
+    .quiz-box .quiz-part .quiz-question{
+        font-size: 1.2rem;
+    }
+    .quiz-box{
+        min-width: 10vw;
+        
+    }
 
-.footer ul li a{
-    text-decoration: none;
+}
+@media (max-width: 380px){
+    .quiz-box{
+        min-width: 5vw;
+    }
+    .quiz-box{
+        border-radius: 0;
+    }
+    .quiz-header{
+        border-radius: 0!important;
+    }
+    .quiz-box .quiz-part{
+        padding: 15px 10px 20px 10px;
+    }
+    .quiz-header .header_text{
+        font-size: 0.9rem;
+    }
+    .quiz-header .timer{
+        width: 6rem;
+        padding: 0;
+    }
+    .quiz-header .timer .time_text {
+        font-size: 0.7rem;
+    }
+    .quiz-header .timer .time_sec {
+        font-size: 0.6rem;
+        height: 1.5rem;
+        width: 2rem;
+    }
+    #quiz footer .total_que span{
+        font-size: 0.7rem;
+    }
+    #quiz footer .next_btn{
+        font-size: 10px;
+        padding: 5px;
+    }
 }
