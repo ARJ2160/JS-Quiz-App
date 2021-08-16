@@ -130,7 +130,7 @@ function showResultBox(score){
     result_box.style.display = "block";//Show the Result Box
 
     if(score >= 3){
-        score_text.innerHTML = '<span>Congratulations! You scored <p>'+ score +'</p> out of <p>'+ questions.length +'</p></span>';
+        score_text.innerHTML = '<h3 class="congrats">Congratulations!</h3><span><p> You scored </p><p>'+ score +'</p> out of <p>'+ questions.length +'</p></span>';
     }else{
         score_text.innerHTML = '<span> You scored <p>'+ score +'</p> out of <p>'+ questions.length +'</p></span><p><span>Please take the test again and score above 3 to download the certificate</span></p>';
         download_btn.style.display = "none";
@@ -140,8 +140,9 @@ function showResultBox(score){
 // <------------------------------------------------------- Starting the Timer --------------------------------------->
 function startTimer(time){
 
-    counter = setInterval(timer, 1000);
     timeText.textContent = "Time Left :- ";
+    counter = setInterval(timer, 1000);
+
     function timer(){
 
         timeCount.textContent = time;
@@ -169,6 +170,7 @@ function startTimer(time){
 // <------------------------------------------------------- Footer Questions Counter --------------------------------------->
 function questionCounter(index){
     const button_counter = quiz_box.querySelector(".total_que");
-    let total_count = '<span><p>'+ index +'</p> / <p>'+ questions.length +'</p>Questions</span>'
+    let total_count = '<span><p>'+ index +'</p> / <p>'+ questions.length +'</p>Questions</span>';
+    // let total_count = '<div>'+ index +'</div> / <div>'+ questions.length + '</div> Questions';
     button_counter.innerHTML = total_count;
 }
