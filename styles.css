@@ -11,67 +11,6 @@ body{
     width: 100%;
     height: 100%;
 }
-/* --------------------------------------------Navbar  ---------------------------------------------------------- */
-.logo{
-    height: 36px;
-    width: 36px;
-    margin-left: 2rem;
-}
-
-.navbar{
-    padding: 0 1rem;
-    min-height: 10vh;
-    background-color: #6A5ACD;
-}
-
-.nav-links{
-    list-style: none;
-    display: flex;
-    margin-top: 1rem;
-}
-
-.nav-links li{
-    color: #fff;
-    padding-right: 3rem;
-    font-size: 1.2rem;  
-}
-.input-group {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: 100%;
-}
-.app-search .form-control {
-    border: none;
-    height: 38px;
-    padding-left: 40px;
-    padding-right: 20px;
-    background-color: #f1f3fa!important;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: black !important;
-}
-.login-btn{
-    background: linear-gradient(150deg, #eaedfd 0%, #eaedfd 100%);
-    color: #323a46 !important;
-    border-radius: 2rem !important;
-    font-weight: 900!important;
-}
-.text-primary {
-    color: #536de6!important;
-}
-.font-weight-bold {
-    font-weight: 700!important;
-}
-.text-center {
-    text-align: center!important;
-}
 /* --------------------------------------------  Big Text  ---------------------------------------------------------- */
 .big-text {
     margin: 5rem .7rem 2rem .7rem;
@@ -104,19 +43,21 @@ body{
     transition: 0.5s ease;
     background-color: rgb(106, 90, 205);
     overflow-y: auto;
+    position: relative;
 }
 .increase-box{
     min-height: 95vh;
 }
 .dis-btn{
-    background-color: #eaedfd;
-    font-weight: 900;
+    background-color: rgb(249,200,81);
     color: #323a46;
-    border-radius: 2rem !important;
+    border-radius: 2rem;
     padding: 10px 15px;
     outline: none;
     border: none;
     font-size: 1rem;
+    font-weight: 900 !important;
+    line-height: 1.5;
     transition: all 0.5s ease;
 }
 .dis-btn:hover{
@@ -129,6 +70,7 @@ body{
 }
 .disappear-text{
     font-size: 2rem;
+    font-weight: 900;
 }
 .poof{
     display: none !important;
@@ -150,6 +92,22 @@ body{
         font-size: 0.5rem;
         padding: 5px 10px;
     }
+}
+/* --------------------------------------------- Timer ------------------------------------------------------------------*/
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 5vh;
+    color: #000;
+    font-size: 1.5rem;
+    background-color: rgb(249,200,81);
+    border-radius: 30px 30px 0 0;
+    transition: all 0.5s ease;
 }
 /*-------------------------------------------- Quiz Section -------------------------------------------------------------*/
 .quiz-box{
@@ -322,12 +280,15 @@ body{
 .result_box .complete_text{
     font-size: 2rem;
 }
-.result_box .score_text span{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+.result_box .score_text{
+    margin-bottom: 1rem;
+}
+.result_box .score_text p{
+    margin-bottom: 0;
     font-size: 1.5rem;
-    margin: 10px 0;
+}
+.score-display{
+    font-size: 1.5rem;
 }
 .fa-icon{
     color: gold;
@@ -345,8 +306,7 @@ body{
     margin: 0 10px;
     height: 40px;
     padding: 5px 20px;
-    outline: none;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 900;
     border: 1px solid #343a40;
     border-radius: 2rem;
@@ -358,7 +318,7 @@ body{
 }
 .result_box .buttons .download_btn{
     background-color: rgb(106, 90, 205);
-    color: #fff;
+    color: rgb(249,200,81);
 }
 @media (max-width: 650px){
     .quiz-box{
@@ -366,6 +326,9 @@ body{
     }
     .shadow-box{
         min-width: 100%;
+        border-radius: 0;
+    }
+    #time{
         border-radius: 0;
     }
 }
@@ -396,11 +359,8 @@ body{
     .quiz-box{
         min-width: 5vw;
     }
-    .quiz-box{
+    .quiz-box,.quiz-header{
         border-radius: 0;
-    }
-    .quiz-header{
-        border-radius: 0!important;
     }
     .quiz-box .quiz-part{
         padding: 15px 10px 20px 10px;
@@ -427,7 +387,7 @@ body{
         font-size: 10px;
         padding: 5px;
     }
-    .score_text .congrats{
+    .score_text .congrats, .result_box .complete_text{
         font-size: 1.1rem;
     }
     .result_box .buttons button {
@@ -435,9 +395,6 @@ body{
         height: 30px;
         padding: 5px 10px;
         margin-bottom: 5px;
-    }
-    .result_box .complete_text{
-        font-size: 1.2rem;
     }
     .result_box .score_text span {
         font-size: 0.7rem;
