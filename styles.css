@@ -282,10 +282,7 @@ body{
 }
 .result_box .score_text{
     margin-bottom: 1rem;
-}
-.result_box .score_text p{
-    margin-bottom: 0;
-    font-size: 1.5rem;
+    font-weight: 900 !important;
 }
 .score-display{
     font-size: 1.5rem;
@@ -353,6 +350,7 @@ body{
     }
     .result_box .score_text span {
         font-size: 0.7rem;
+        font-weight: 900;
     }
 }
 @media (max-width: 380px){
@@ -397,6 +395,6 @@ body{
         margin-bottom: 5px;
     }
     .result_box .score_text span {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 }

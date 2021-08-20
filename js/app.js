@@ -192,7 +192,7 @@ function showResultBox(score, time){
 
         medal.innerHTML = '<i class="fas fa-icon fa-medal"></i>';
 
-        score_text.innerHTML = '<h3 class="congrats">Congratulations!</h3><span><p> You scored </p><p>'+ score +'</p> out of <p>'+ questions.length +'</p></span>';
+        score_text.innerHTML = '<h2 class="congrats">Congratulations!</h2><span> You scored '+ score +' out of '+ questions.length +'</span>';
     }
     // else if(score >= 3 && time > 0){
 
@@ -209,7 +209,7 @@ function showResultBox(score, time){
         medal.innerHTML = '<i class="fas fa-clock"></i>';
         complete_text.innerHTML = "";
 
-        score_text.innerHTML = '<p>Please retake the test as your score was not high enough to qualify for the certificate. Your score is </p><div class="score-display">'+ score +' out of '+ questions.length +'</div><p>Please take the test again and score above 3 to download the certificate.</p>';
+        score_text.innerHTML = '<h2>Please retake the test as your score was not high enough to qualify for the certificate. Your score is </h2><div class="score-display">'+ score +' out of '+ questions.length +'</div><p>Please take the test again and score above 3 to download the certificate.</p>';
 
         download_btn.style.display = "none";
     }
@@ -220,7 +220,7 @@ function showResultBox(score, time){
         medal.innerHTML = '<i class="fas fa-clock"></i>';
         complete_text.innerHTML = "";
 
-        score_text.innerHTML = '<p> Oops! You ran out of time and your score was not high enough to qualify for the certificate. Your score is </p><div class="score-display">'+ score +' out of '+ questions.length +'</div><p>Please take the test again and score above 3 to download the certificate</span></p>';
+        score_text.innerHTML = '<h2> Oops! You ran out of time and your score was not high enough to qualify for the certificate. Your score is </h2><div class="score-display">'+ score +' out of '+ questions.length +'</div><h3>Please take the test again and score above 3 to download the certificate</span></h3>';
 
         download_btn.style.display = "none";
     }
