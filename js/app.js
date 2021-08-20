@@ -196,8 +196,6 @@ function showResultBox(score, time){
     }
     // else if(score >= 3 && time > 0){
 
-    //     console.log("2");
-
     //     medal.innerHTML = '<i class="fas fa-icon fa-medal"></i>';
 
     //     score_text.innerHTML = '<h3 class="congrats">Congratulations!</h3><span><p> You scored </p><p>'+ score +'</p> out of <p>'+ questions.length +'</p></span>';
